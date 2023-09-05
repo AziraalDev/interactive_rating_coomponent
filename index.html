@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Interactive rating component</title>
+</head>
+
+<body>
+
+  <main class="container" data-js-main>
+    <img class="container_star" src="./images/icon-star.svg" alt="icon of star" width="16px" height="16px">
+    <h1 class="container__title">How did we do?</h1>
+    <p class="container__text">
+      Please let us know how we did with your support request. All feedback is appreciated
+      to help us improve our offering!
+    </p>
+    <form data-js-form>
+      <div class="circle-box">
+        <label class="form-label">
+          <input type="radio" name="rating_number" value="1" class="for-sr">
+          <span class="text_number">1 <span class="for-sr">star</span></span>
+        </label>
+        <label class="form-label">
+          <input type="radio" name="rating_number" value="2" class="for-sr">
+          <span class="text_number">2 <span class="for-sr">stars</span></span>
+        </label>
+        <label class="form-label">
+          <input type="radio" name="rating_number" value="3" class="for-sr">
+          <span class="text_number">3 <span class="for-sr">stars</span></span>
+        </label>
+        <label class="form-label">
+          <input type="radio" name="rating_number" value="4" class="for-sr">
+          <span class="text_number">4 <span class="for-sr">stars</span></span>
+        </label>
+        <label class="form-label">
+          <input type="radio" name="rating_number" value="5" class="for-sr">
+          <span class="text_number">5 <span class="for-sr">stars</span></span>
+        </label>
+      </div>
+      <button>Submit</button>
+    </form>
+
+    <template data-js-temp>
+      <img class="img-result" src="./images/illustration-thank-you.svg" alt="" width="162" height="108">
+      <p class="container_rating_text">You selected {{ rating }} out of 5</p>
+      <h1 class="container__title ta-c">Thank you!</h1>
+      <p class="container__text ta-c">
+        We appreciate you taking the time to give a rating. If you ever need more support,
+        don’t hesitate to get in touch!</p>
+    </template>
+    <script src="script.js"></script>
+  </main>
+</body>
+
+</html>

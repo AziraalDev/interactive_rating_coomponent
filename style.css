@@ -1,0 +1,177 @@
+/*ROOT VARIABLES*/
+:root {
+    --clr-orange: hsl(25, 97%, 53%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-hover-rating: hsl(217, 12%, 63%);
+    --clr-text: hsl(216, 12%, 54%);
+    --clr-container-bg: hsl(213, 19%, 18%);
+    --clr-body-bg: hsl(216, 12%, 8%);
+
+    --clr-gradient: linear-gradient(to top, hsl(216, 12%, 8%), hsl(213, 19%, 18%));
+
+    --font-family-main: 'Overpass', sans-serif;
+
+    --font-weight-400: 400;
+    --font-weight-700: 700;
+}
+
+/*RESET*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+img,
+picture,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button {
+    font: inherit;
+}
+
+p,
+h1 {
+    overflow-wrap: break-word;
+}
+
+/*for screen-reader*/
+/*https://tailwindcss.com/docs/screen-readers*/
+.for-sr {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.ta-c{
+    text-align: center;
+}
+
+.container_rating_text{
+    color: var(--clr-orange);
+    --rating-text-size: 2rem;
+    background-color: var(--clr-container-bg);
+    border-radius: var(--rating-text-size);
+    width: max-content; /*something new*/
+    height: var(--rating-text-size);
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+    margin-block: 2rem;
+    line-height: var(--rating-text-size);
+}
+
+/*Main section*/
+body {
+    font-family: var(--font-family-main);
+    font-size: 0.9375rem;
+    font-weight: (--font-weight-400);
+    background-color: var(--clr-body-bg);
+    color: var(--clr-text);
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    background: var(--clr-gradient);
+    border: 0;
+    border-radius: 1.875rem;
+    max-width: 25.75rem;
+    padding: 2rem;
+    /*grid or no....*/
+}
+
+h1 {
+    color: var(--clr-white);
+    font-size: 1.75rem;
+    /*to nore : line-height equal line-height in px divided by font-size in px*/
+    line-height: 1.25;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    line-height: 1.6;
+}
+
+.container_star {
+    --star-size: 3rem;
+    background-color: var(--clr-container-bg);
+    padding: 1rem;
+    width: var(--star-size);
+    height: var(--star-size);
+    border-radius: var(--star-size);
+
+    margin-bottom: 1.875rem;
+}
+
+.circle-box {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    margin-block: 1.5rem 2rem;
+}
+
+button {
+    --button-size: 2.8125rem;
+    font-weight: var(--font-weight-700);
+    color: var(--clr-white);
+    background-color: var(--clr-orange);
+    border: 0;
+    /*possible to use also 'unset' */
+    border-radius: var(--button-size);
+    width: 100%;
+    height: var(--button-size);
+    text-transform: uppercase;
+    /*some transition ?!*/
+}
+
+button:is(:hover, :focus-visible) {
+    background-color: var(--clr-white);
+    color: var(--clr-orange);
+    cursor: pointer;
+}
+
+.form-label .text_number {
+    display: block;
+    --number-size: 3.1875rem;
+    background-color: var(--clr-container-bg);
+    width: var(--number-size);
+    height: var(--number-size);
+    border-radius: var(--number-size);
+    text-align: center;
+    line-height: var(--number-size);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: var(--font-weight-700);
+}
+
+/*Here we are hovering label*/
+.form-label:hover .text_number {
+    background-color: var(--clr-orange);
+    color: var(--clr-white);
+}
+
+/*Here we are clicking on label with hidden input and activate it*/
+.form-label input:checked+.text_number {
+    background-color: var(--clr-text);
+    color: var(--clr-white);
+}
+
+/*Second-page*/
+.img-result{
+    margin-inline: auto;
+}
