@@ -136,7 +136,7 @@ button {
     width: 100%;
     height: var(--button-size);
     text-transform: uppercase;
-    /*some transition ?!*/
+    transition: background-color 150ms ease-in-out;
 }
 
 button:is(:hover, :focus-visible) {
@@ -157,6 +157,7 @@ button:is(:hover, :focus-visible) {
     cursor: pointer;
     font-size: 1rem;
     font-weight: var(--font-weight-700);
+    transition: background-color 150ms ease-in-out;
 }
 
 /*Here we are hovering label*/
