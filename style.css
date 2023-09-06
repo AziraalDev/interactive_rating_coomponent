@@ -118,6 +118,11 @@ p {
     margin-bottom: 1.875rem;
 }
 
+.container_star img{
+    width: 1rem;
+    height: 1rem;
+}
+
 .circle-box {
     display: flex;
     justify-content: space-between;
